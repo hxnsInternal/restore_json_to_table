@@ -60,7 +60,7 @@
 
 			-- crear script de creacion de tabla destino
 			lsSQl := chr(10) || 'drop table if exists '|| lsTablaDestino || ';' || chr(10) || 'create table ' || lsTablaDestino || ' as '|| chr(10) || 'select ';
-			lsSql := lsSql || (select string_agg('datos ->> ''' || c.campo || ''' ' || c.campo ,',' || chr(10)) from tmp_campos c) || chr(10);	-- concatenar campos
+			lsSql := lsSql || (select string_agg( lsCampo || ' ->> ''' || c.campo || ''' ' || c.campo ,',' || chr(10)) from tmp_campos c) || chr(10);	-- concatenar campos
 			lsSql := lsSql || 'from '|| lsTablaOrigen || ';' ;	-- definir tabla origen
 
 			raise notice 'lsSql : %', lsSql;	
