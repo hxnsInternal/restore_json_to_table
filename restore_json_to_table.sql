@@ -1,5 +1,5 @@
 
-	@autor: Hans Zamora Carrillo - hanszcarrillo@hotmail.com :  Colombia, Bogota
+	-- @autor: Hans Zamora Carrillo - hanszcarrillo@hotmail.com :  Colombia, Bogota
 
 	drop table if exists public.tbl_test;	-- creacion de tabla
 	create table public.tbl_test (
